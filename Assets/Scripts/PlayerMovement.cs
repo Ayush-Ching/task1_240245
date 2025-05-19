@@ -1,74 +1,25 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D rb;
 
-    [Space]
     [Header("Stats")]
-    public float speed = 10;
-    public float jumpForce = 50;
-    public float slideSpeed = 5;
-    public float wallJumpLerp = 10;
-    public float dashSpeed = 20;
-
-    [Space]
-    [Header("Booleans")]
-    [SerializeField] private bool canMove;
-    [SerializeField] private bool wallGrab;
-    [SerializeField] private bool wallJumped;
-    [SerializeField] private bool wallSlide;
-    [SerializeField] private bool isDashing;
-
-    [Space]
-
-    private bool groundTouch;
-    private bool hasDashed;
+    [SerializeField] private float speed = 10f;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start() {
-        canMove = true;
-        wallGrab = false;
-        wallJumped = false;
-        wallSlide = false;
-        isDashing = false;
+
     }
 
     private void Update() {
-        float x = 0, y = 0;
-        if (Input.GetKey(KeyCode.W)) {
-            y = +1f;
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            x = -1f;
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            y = -1f;
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            x = +1f;
-        }
+        rb.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * 10, rb.linearVelocity.y);
 
-        Vector2 moveDir = new Vector2(x, y);
-        Walk(moveDir);
-    }
-
-    private void Walk(Vector2 moveDir) {
-        if (!canMove)
-            return;
-
-        if (wallGrab)
-            return;
-
-        if (!wallJumped) {
-            rb.linearVelocity = new Vector2(moveDir.x * speed, rb.linearVelocity.y);
-        }
-        else {
-            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, (new Vector2(moveDir.x * speed, rb.linearVelocity.y)), wallJumpLerp * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, speed);
         }
     }
-
 }
