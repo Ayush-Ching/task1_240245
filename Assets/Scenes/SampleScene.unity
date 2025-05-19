@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 963927219}
   - component: {fileID: 963927218}
   - component: {fileID: 963927220}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,6 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747781715}
   - component: {fileID: 1747781716}
+  - component: {fileID: 1747781717}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -501,7 +502,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1810004540}
@@ -555,12 +556,34 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1747781717
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747781714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92c0d07cd6532d445959b2518c605491, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1810004539
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,9 +593,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1810004540}
-  - component: {fileID: 1810004541}
   - component: {fileID: 1810004542}
   - component: {fileID: 1810004543}
+  - component: {fileID: 1810004541}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -608,18 +631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f726fb685c15c4a949191bbadbba95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpForce: 10
-  slideSpeed: 5
-  wallJumpLerp: 10
-  dashSpeed: 20
-  fallMultiplier: 2.5
-  lowJumpMultiplier: 2
-  canMove: 0
-  wallGrab: 0
-  wallJumped: 0
-  wallSlide: 0
-  isDashing: 0
+  moveSpeed: 10
+  isInAir: 0
 --- !u!61 &1810004542
 BoxCollider2D:
   m_ObjectHideFlags: 0

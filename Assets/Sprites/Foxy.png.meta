@@ -104,6 +104,9 @@ TextureImporter:
   - first:
       213: -2183625744418404708
     second: Foxy_33
+  - first:
+      213: -8054601095851904577
+    second: Foxy_34
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -150,7 +153,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -238,7 +241,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Foxy_0
+      name: Foxy_Idle_1
       rect:
         serializedVersion: 2
         x: 0
@@ -246,7 +249,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,7 +263,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_1
+      name: Foxy_Idle_2
       rect:
         serializedVersion: 2
         x: 32
@@ -268,7 +271,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -282,7 +285,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_2
+      name: Foxy_Idle_3
       rect:
         serializedVersion: 2
         x: 64
@@ -290,7 +293,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -304,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_3
+      name: Foxy_Idle_4
       rect:
         serializedVersion: 2
         x: 96
@@ -312,7 +315,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -326,7 +329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_4
+      name: Foxy_Run_1
       rect:
         serializedVersion: 2
         x: 128
@@ -334,7 +337,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -348,7 +351,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_5
+      name: Foxy_Run_2
       rect:
         serializedVersion: 2
         x: 160
@@ -356,7 +359,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -370,7 +373,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_6
+      name: Foxy_Run_3
       rect:
         serializedVersion: 2
         x: 0
@@ -378,7 +381,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -392,7 +395,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_7
+      name: Foxy_Run_4
       rect:
         serializedVersion: 2
         x: 32
@@ -400,7 +403,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -414,7 +417,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_8
+      name: Foxy_Run_5
       rect:
         serializedVersion: 2
         x: 64
@@ -422,7 +425,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -436,7 +439,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_9
+      name: Foxy_Run_6
       rect:
         serializedVersion: 2
         x: 96
@@ -444,7 +447,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -458,7 +461,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_10
+      name: Foxy_Climb_1-3
       rect:
         serializedVersion: 2
         x: 128
@@ -466,7 +469,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -480,7 +483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_11
+      name: Foxy_Climb_2
       rect:
         serializedVersion: 2
         x: 160
@@ -488,7 +491,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -502,7 +505,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_12
+      name: Foxy_Climb_4
       rect:
         serializedVersion: 2
         x: 0
@@ -510,7 +513,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -524,7 +527,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_13
+      name: Foxy_Crouch_2
       rect:
         serializedVersion: 2
         x: 32
@@ -532,7 +535,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -546,7 +549,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_14
+      name: Foxy_Crouch_3
       rect:
         serializedVersion: 2
         x: 64
@@ -554,7 +557,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -568,7 +571,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_15
+      name: Foxy_Hurt_1
       rect:
         serializedVersion: 2
         x: 96
@@ -576,7 +579,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -590,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_16
+      name: Foxy_Hurt_2
       rect:
         serializedVersion: 2
         x: 128
@@ -598,7 +601,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -612,7 +615,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_17
+      name: Foxy_Jump_up
       rect:
         serializedVersion: 2
         x: 160
@@ -620,7 +623,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -634,7 +637,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_18
+      name: Foxy_Jump_fall
       rect:
         serializedVersion: 2
         x: 0
@@ -642,7 +645,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -656,7 +659,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_19
+      name: Foxy_WallClimb_1
       rect:
         serializedVersion: 2
         x: 32
@@ -664,7 +667,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -678,7 +681,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_20
+      name: Foxy_WallClimb_2
       rect:
         serializedVersion: 2
         x: 64
@@ -686,7 +689,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -700,7 +703,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_21
+      name: Foxy_WallClimb_3
       rect:
         serializedVersion: 2
         x: 96
@@ -708,7 +711,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -722,7 +725,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_22
+      name: Foxy_Hurt_v2
       rect:
         serializedVersion: 2
         x: 128
@@ -730,7 +733,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -744,7 +747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_23
+      name: Foxy_Dizzy_1
       rect:
         serializedVersion: 2
         x: 160
@@ -752,7 +755,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -766,7 +769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_24
+      name: Foxy_Dizzy_2
       rect:
         serializedVersion: 2
         x: 0
@@ -774,7 +777,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -788,7 +791,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_25
+      name: Foxy_Dizzy_3
       rect:
         serializedVersion: 2
         x: 32
@@ -796,7 +799,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -810,7 +813,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_26
+      name: Foxy_Dizzy_4
       rect:
         serializedVersion: 2
         x: 64
@@ -818,7 +821,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -832,7 +835,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_27
+      name: Foxy_Dizzy_5
       rect:
         serializedVersion: 2
         x: 96
@@ -840,7 +843,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -854,7 +857,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_28
+      name: Foxy_Dizzy_16
       rect:
         serializedVersion: 2
         x: 128
@@ -862,7 +865,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -876,7 +879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_29
+      name: Foxy_Roll_1
       rect:
         serializedVersion: 2
         x: 160
@@ -884,7 +887,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -898,7 +901,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_30
+      name: Foxy_Roll_2
       rect:
         serializedVersion: 2
         x: 0
@@ -906,7 +909,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -920,7 +923,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_31
+      name: Foxy_Roll_3
       rect:
         serializedVersion: 2
         x: 32
@@ -928,7 +931,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -942,7 +945,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_32
+      name: Foxy_Roll_4
       rect:
         serializedVersion: 2
         x: 64
@@ -950,7 +953,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -964,7 +967,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Foxy_33
+      name: Foxy_LookUp
       rect:
         serializedVersion: 2
         x: 96
@@ -972,7 +975,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -985,11 +988,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Foxy_Victory
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1764a7afe483090800000000000000
+      internalID: -8054601095851904577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Foxy_35
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc02958f8e7b1724e9edf3b543d95ed4
+      internalID: 2125179715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 2d6d05fc2e66bcb4aace6c988183be45
     internalID: 0
     vertices: []
     indices: 
@@ -999,40 +1046,42 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Foxy_0: 6357066537086400474
-      Foxy_1: 1196277765325230189
-      Foxy_10: -6232806775797239013
-      Foxy_11: 7637513513235184138
-      Foxy_12: -5979719378229913919
-      Foxy_13: -732254268846855968
-      Foxy_14: -5825768138490875029
-      Foxy_15: -3319882270236423949
-      Foxy_16: 1803946678959209903
-      Foxy_17: 7990330797608100020
-      Foxy_18: 5133289743218661878
-      Foxy_19: -1918753723562075085
-      Foxy_2: 6607475399574633841
-      Foxy_20: 6278374893546453958
-      Foxy_21: 3312613975072745477
-      Foxy_22: -1951178053876083145
-      Foxy_23: -2364827806019857562
-      Foxy_24: 1044723063584995644
-      Foxy_25: -1001858012858397671
-      Foxy_26: -7763409217687066054
-      Foxy_27: -4471022879201131797
-      Foxy_28: -6200491800050789904
-      Foxy_29: -6661635459789378263
-      Foxy_3: 4156448403620328198
-      Foxy_30: -2330777562487168015
-      Foxy_31: -1288194871239815715
-      Foxy_32: 5465527668051340799
-      Foxy_33: -2183625744418404708
-      Foxy_4: -852657772717977907
-      Foxy_5: -4477575697270758305
-      Foxy_6: -3445319210475212455
-      Foxy_7: -353740809493951218
-      Foxy_8: -2573326914261452979
-      Foxy_9: 3454817357791386562
+      Foxy_35: 2125179715
+      Foxy_Climb_1-3: -6232806775797239013
+      Foxy_Climb_2: 7637513513235184138
+      Foxy_Climb_4: -5979719378229913919
+      Foxy_Crouch_2: -732254268846855968
+      Foxy_Crouch_3: -5825768138490875029
+      Foxy_Dizzy_1: -2364827806019857562
+      Foxy_Dizzy_16: -6200491800050789904
+      Foxy_Dizzy_2: 1044723063584995644
+      Foxy_Dizzy_3: -1001858012858397671
+      Foxy_Dizzy_4: -7763409217687066054
+      Foxy_Dizzy_5: -4471022879201131797
+      Foxy_Hurt_1: -3319882270236423949
+      Foxy_Hurt_2: 1803946678959209903
+      Foxy_Hurt_v2: -1951178053876083145
+      Foxy_Idle_1: 6357066537086400474
+      Foxy_Idle_2: 1196277765325230189
+      Foxy_Idle_3: 6607475399574633841
+      Foxy_Idle_4: 4156448403620328198
+      Foxy_Jump_fall: 5133289743218661878
+      Foxy_Jump_up: 7990330797608100020
+      Foxy_LookUp: -2183625744418404708
+      Foxy_Roll_1: -6661635459789378263
+      Foxy_Roll_2: -2330777562487168015
+      Foxy_Roll_3: -1288194871239815715
+      Foxy_Roll_4: 5465527668051340799
+      Foxy_Run_1: -852657772717977907
+      Foxy_Run_2: -4477575697270758305
+      Foxy_Run_3: -3445319210475212455
+      Foxy_Run_4: -353740809493951218
+      Foxy_Run_5: -2573326914261452979
+      Foxy_Run_6: 3454817357791386562
+      Foxy_Victory: -8054601095851904577
+      Foxy_WallClimb_1: -1918753723562075085
+      Foxy_WallClimb_2: 6278374893546453958
+      Foxy_WallClimb_3: 3312613975072745477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
