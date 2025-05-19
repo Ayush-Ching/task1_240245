@@ -10,12 +10,16 @@ public class Foxy : MonoBehaviour {
 
     [Header("Stats")]
     [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float jumpSpeed = 10f;
     [SerializeField] private float scale = 7f;
+    [SerializeField] private float gravityScale_up = 2f;
+    [SerializeField] private float gravityScale_down = 2.5f;
 
     //[Header("Booleans")]
 
     [Header("Layer Masks")]
     [SerializeField] private LayerMask groundLayerMask;
+    [SerializeField] private LayerMask wallLayerMask;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -29,7 +33,7 @@ public class Foxy : MonoBehaviour {
 
     private void Update() {
         float horizontalInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(horizontalInput * 10, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
         if(horizontalInput > 0f) {
             transform.localScale = Vector3.one * scale;
@@ -44,20 +48,24 @@ public class Foxy : MonoBehaviour {
 
         anim.SetBool("isRunning", horizontalInput != 0);
         anim.SetBool("isGrounded", isGrounded());
+
+        rb.gravityScale = (rb.angularVelocity <= 0f) ? gravityScale_down : gravityScale_up;
+
+        print(onWall());
     }
 
     private void Jump() {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, moveSpeed);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
         anim.SetTrigger("jump");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Ground") {
-        }
+    private bool isGrounded() {
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, Vector2.down, 0.1f, groundLayerMask);
+        return raycastHit2D.collider != null;
     }
 
-    private bool isGrounded() {
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, Vector2.down, 0.2f, groundLayerMask);
+    private bool onWall() {
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayerMask);
         return raycastHit2D.collider != null;
     }
 }
