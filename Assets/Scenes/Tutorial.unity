@@ -49206,6 +49206,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Foxy
       objectReference: {fileID: 0}
+    - target: {fileID: 6770854348345078139, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770854348345078139, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770854348345078139, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
