@@ -21,6 +21,7 @@ public class Foxy : MonoBehaviour {
     [SerializeField] private float gravityScale_down = 2.5f;
     [SerializeField] private float dashDamping = 2.0f;
     [SerializeField] private float deathWaitTime = 1f;
+    [SerializeField] private float victoryWaitTime = 2f;
 
     //[Header("Booleans")]
     private bool canDash;
@@ -44,6 +45,7 @@ public class Foxy : MonoBehaviour {
         hitSpike = false;
         canMove = true;
         anim.SetBool("isDead", false);
+        anim.SetBool("hasWon", false);
     }
 
     private void Update() {
@@ -115,6 +117,10 @@ public class Foxy : MonoBehaviour {
         if (hitSpike) {
             StartCoroutine(Die());
         }
+
+        if (hasWon) {
+            StartCoroutine(Victory());
+        }
     }
     private bool isGrounded() {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, Vector2.down, 0.1f, groundLayerMask);
@@ -132,6 +138,13 @@ public class Foxy : MonoBehaviour {
         }
         else {
             hitSpike = false;
+        }
+
+        if (collision.gameObject.tag == "Trophy") {
+            hasWon = true;
+        }
+        else {
+            hasWon = false;
         }
     }
 
@@ -159,5 +172,13 @@ public class Foxy : MonoBehaviour {
         rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(deathWaitTime);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private IEnumerator Victory() {
+        anim.SetBool("hasWon", true);
+        canMove = false;
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(victoryWaitTime);
+        //Load Next Level
     }
 }
