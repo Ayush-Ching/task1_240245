@@ -29,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6158514644133258963}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,16 +107,21 @@ MonoBehaviour:
   jumpSpeed: 25
   climbSpeed: 10
   dashSpeed: 25
-  scale: 7
+  scale: 1.5
   gravityScale_up: 6
   gravityScale_down: 9
   dashDamping: 7
+  deathWaitTime: 1
+  victoryWaitTime: 2
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
   wallLayerMask:
     serializedVersion: 2
     m_Bits: 128
+  spikesLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &1397939257884630759
 Animator:
   serializedVersion: 7
@@ -173,17 +178,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0005401671, y: -0.056177564}
+  m_Offset: {x: 0.058988094, y: -0.37607777}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.17197916, y: 0.20764486}
+  m_Size: {x: 0.8706248, y: 1.243262}
   m_EdgeRadius: 0
 --- !u!50 &3782276658182624922
 Rigidbody2D:

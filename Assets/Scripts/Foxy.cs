@@ -49,6 +49,7 @@ public class Foxy : MonoBehaviour {
     }
 
     private void Update() {
+        Debug.Log(transform.localScale);
         float horizontalInput = 0;
         float verticalInput = 0;
 
