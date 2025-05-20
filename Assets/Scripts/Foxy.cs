@@ -128,7 +128,7 @@ public class Foxy : MonoBehaviour {
     }
 
     private bool isTouchingWall() {
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayerMask);
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, groundLayerMask);
         return raycastHit2D.collider != null;
     }
 
