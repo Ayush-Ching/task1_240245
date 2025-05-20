@@ -2,6 +2,7 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Foxy : MonoBehaviour {
 
@@ -19,13 +20,18 @@ public class Foxy : MonoBehaviour {
     [SerializeField] private float gravityScale_up = 2f;
     [SerializeField] private float gravityScale_down = 2.5f;
     [SerializeField] private float dashDamping = 2.0f;
+    [SerializeField] private float deathWaitTime = 1f;
 
-    [Header("Booleans")]
+    //[Header("Booleans")]
     private bool canDash;
+    private bool canMove;
+    private bool hitSpike;
+    private bool hasWon;
 
     [Header("Layer Masks")]
     [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private LayerMask wallLayerMask;
+    [SerializeField] private LayerMask spikesLayerMask;
 
     private void Awake() {
         rb = GetComponent<Rigidbody2D>();
@@ -35,7 +41,9 @@ public class Foxy : MonoBehaviour {
     }
 
     private void Start() {
-
+        hitSpike = false;
+        canMove = true;
+        anim.SetBool("isDead", false);
     }
 
     private void Update() {
@@ -74,10 +82,10 @@ public class Foxy : MonoBehaviour {
             horizontalInput = 0;
         }
 
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        if (canMove) rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C)) && isGrounded()) {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
+            if (canMove) rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
         }
 
         anim.SetBool("isRunning", horizontalInput != 0);
@@ -89,7 +97,7 @@ public class Foxy : MonoBehaviour {
         if(isTouchingWall() && Input.GetKey(KeyCode.Z)) {
             anim.SetBool("isOnWall", true);
             rb.gravityScale = 0f;
-            rb.linearVelocity = new Vector2(0, verticalInput * climbSpeed);
+            if (canMove) rb.linearVelocity = new Vector2(0, verticalInput * climbSpeed);
             anim.SetBool("isClimbing", verticalInput != 0);
         }
         else {
@@ -97,19 +105,16 @@ public class Foxy : MonoBehaviour {
             anim.SetBool("isOnWall", false);
         }
 
-        if(canDash && Input.GetKeyDown(KeyCode.X)) {
+        if(canMove && canDash && Input.GetKeyDown(KeyCode.X)) {
             Vector2 dir = new Vector2(horizontalInput, verticalInput);
             canDash = false;
             StartCoroutine(Dash(dir));
             rb.linearDamping = 0;
         }
 
-        //if (rb.linearVelocity.magnitude > moveSpeed) {
-        //    rb.linearDamping = dashDamping;
-        //}
-        //else {
-        //    rb.linearDamping = 0;
-        //}
+        if (hitSpike) {
+            StartCoroutine(Die());
+        }
     }
     private bool isGrounded() {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, Vector2.down, 0.1f, groundLayerMask);
@@ -119,6 +124,15 @@ public class Foxy : MonoBehaviour {
     private bool isTouchingWall() {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, new Vector2(transform.localScale.x, 0), 0.1f, wallLayerMask);
         return raycastHit2D.collider != null;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.tag == "Spike") {
+            hitSpike = true;
+        }
+        else {
+            hitSpike = false;
+        }
     }
 
     private IEnumerator Dash(Vector2 dir) {
@@ -137,5 +151,13 @@ public class Foxy : MonoBehaviour {
         anim.SetBool("isDashing", false);
         
         yield return null;
+    }
+
+    private IEnumerator Die() {
+        anim.SetBool("isDead", true);
+        canMove = false;
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(deathWaitTime);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
