@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f726fb685c15c4a949191bbadbba95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moxxy: {fileID: 955042585003544113, guid: 9806642ab21e93742a1cb75733c6fe43, type: 3}
   moveSpeed: 10
   jumpSpeed: 25
   climbSpeed: 10
@@ -113,6 +114,11 @@ MonoBehaviour:
   dashDamping: 7
   deathWaitTime: 1
   victoryWaitTime: 2
+  isGrounded: 0
+  isRunning: 0
+  isOnWall: 0
+  isDashing: 0
+  isGoingUp: 0
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
