@@ -1,10 +1,17 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuManager : MonoBehaviour {
 
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject instructions;
     [SerializeField] private GameObject levelSelectScreen;
+
+    [Space]
+    [Header("Level Buttons")]
+    [SerializeField] private Button[] buttons;
 
     private void Awake() {
         mainMenu.SetActive(true);
@@ -32,5 +39,9 @@ public class MainMenuManager : MonoBehaviour {
 
     public void QuitGame() {
         Application.Quit();
+    }
+
+    public void LevelSelect(int level) {
+        SceneManager.LoadScene("Level " +  level);
     }
 }
