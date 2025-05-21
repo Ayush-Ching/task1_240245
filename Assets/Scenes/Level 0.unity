@@ -19501,6 +19501,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8506630279677318641, guid: acd11500c2c906143962d8151ec50a06, type: 3}
   m_PrefabInstance: {fileID: 21425093}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540831505 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2226871923907037715, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
+  m_PrefabInstance: {fileID: 480195232137835429}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4f5bcd887cf3d44afaf91bf327b950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1550689914
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20541,6 +20552,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2012510186860209113, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
   m_PrefabInstance: {fileID: 1809069060}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1810157837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2226871923907037715, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
+  m_PrefabInstance: {fileID: 1809069060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4f5bcd887cf3d44afaf91bf327b950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1843210496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21415,6 +21437,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Foxy
       objectReference: {fileID: 0}
+    - target: {fileID: 6158514644133258963, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: m_TagString
+      value: Foxy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21432,6 +21458,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
+      propertyPath: checkPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
+      propertyPath: 'checkPoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1540831505}
+    - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
+      propertyPath: 'checkPoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1810157837}
     - target: {fileID: 5599943266910292076, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.5

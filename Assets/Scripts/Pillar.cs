@@ -1,15 +1,13 @@
+using System.Collections;
 using UnityEngine;
 
 public class Pillar : MonoBehaviour {
 
-    [Header("Colors")]
-    [SerializeField] private Color initColor;
-    [SerializeField] private Color touchedColor;
-    [SerializeField] private Color openColor;
+    
 
     [Space]
     [Header("CheckPoints")]
-    [SerializeField] private GameObject[] checkPoints;
+    [SerializeField] private CheckPoint[] checkPoints;
 
     private Animator anim;
 
@@ -18,14 +16,27 @@ public class Pillar : MonoBehaviour {
     }
 
     private void Start() {
-        for(int i=0; i<checkPoints.Length; i++) {
-            checkPoints[i].GetComponent<SpriteRenderer>().color = initColor;
-        }
+        anim.SetBool("isOpen", false);
     }
 
     private void Update() {
-        
+        int sum = 0;
+        for(int i=0; i<checkPoints.Length; i++) {
+            sum += checkPoints[i].state;
+        }
+        if(sum >= checkPoints.Length) {
+            for (int i = 0; i < checkPoints.Length; i++) {
+                checkPoints[i].state = 2;
+                checkPoints[i].defState = 2;
+                checkPoints[i].renderColor();
+            }
+            StartCoroutine(OpenPillar());
+        }
     }
 
-    private void 
+    private IEnumerator OpenPillar() {
+        anim.SetBool("isOpen", true);
+        yield return new WaitForSeconds(1f);
+        Destroy(gameObject);
+    }
 }

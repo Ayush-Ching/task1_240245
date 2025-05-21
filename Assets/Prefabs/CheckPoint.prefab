@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5049398452434243981}
   - component: {fileID: 5413922687988599318}
   - component: {fileID: 8951358786171021072}
+  - component: {fileID: 2226871923907037715}
   m_Layer: 0
   m_Name: CheckPoint
   m_TagString: Untagged
@@ -157,3 +158,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2226871923907037715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544270292794821599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b4f5bcd887cf3d44afaf91bf327b950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initColor: {r: 0, g: 0.65503407, b: 1, a: 1}
+  touchedColor: {r: 1, g: 1, b: 1, a: 1}
+  openColor: {r: 0.563427, g: 0, b: 1, a: 1}
+  state: 0
