@@ -20540,7 +20540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8544270292794821599, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
       propertyPath: m_Name
-      value: CheckPoint (1)
+      value: Key (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21281,11 +21281,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012510186860209113, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 71
+      value: 63
       objectReference: {fileID: 0}
     - target: {fileID: 2012510186860209113, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2012510186860209113, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21321,7 +21321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8544270292794821599, guid: da83da9afb7ea6c4e85646fb838d35ba, type: 3}
       propertyPath: m_Name
-      value: CheckPoint
+      value: Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21458,6 +21458,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
+      propertyPath: keys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
+      propertyPath: 'keys.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1540831505}
+    - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
+      propertyPath: 'keys.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1810157837}
     - target: {fileID: 2232202221858909119, guid: 54e97f848a521f448940dd519e1c2092, type: 3}
       propertyPath: checkPoints.Array.size
       value: 2

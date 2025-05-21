@@ -7,7 +7,7 @@ public class Pillar : MonoBehaviour {
 
     [Space]
     [Header("CheckPoints")]
-    [SerializeField] private CheckPoint[] checkPoints;
+    [SerializeField] private Key[] keys;
 
     private Animator anim;
 
@@ -21,14 +21,14 @@ public class Pillar : MonoBehaviour {
 
     private void Update() {
         int sum = 0;
-        for(int i=0; i<checkPoints.Length; i++) {
-            sum += checkPoints[i].state;
+        for(int i=0; i<keys.Length; i++) {
+            sum += keys[i].state;
         }
-        if(sum >= checkPoints.Length) {
-            for (int i = 0; i < checkPoints.Length; i++) {
-                checkPoints[i].state = 2;
-                checkPoints[i].defState = 2;
-                checkPoints[i].renderColor();
+        if(sum >= keys.Length) {
+            for (int i = 0; i < keys.Length; i++) {
+                keys[i].state = 2;
+                keys[i].defState = 2;
+                keys[i].renderColor();
             }
             StartCoroutine(OpenPillar());
         }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CheckPoint : MonoBehaviour {
+public class Key : MonoBehaviour {
 
     [Header("Colors")]
     [SerializeField] private Color initColor;
