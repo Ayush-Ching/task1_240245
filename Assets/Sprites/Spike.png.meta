@@ -3,11 +3,11 @@ guid: 4de574688778faf4f985f269b389b00f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4723107735738678597
-    second: Idle_0
+      213: -5159362228428509745
+    second: Spike_0
   - first:
-      213: -7385789195546760866
-    second: Idle_1
+      213: 973612898547601132
+    second: Spike_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,8 +50,8 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 0
-  spriteMeshType: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
@@ -147,18 +147,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 7
+        width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54d7a982679db8140800000000000000
-      internalID: 4723107735738678597
+      spriteID: fcd63f283634668b0800000000000000
+      internalID: -5159362228428509745
       vertices: []
       indices: 
       edges: []
@@ -167,20 +167,20 @@ TextureImporter:
       name: Spike_1
       rect:
         serializedVersion: 2
-        x: 8
+        x: 7
         y: 0
-        width: 8
+        width: 9
         height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e596485bbd7608990800000000000000
-      internalID: -7385789195546760866
+      spriteID: cee0ba6d5c7f28d00800000000000000
+      internalID: 973612898547601132
       vertices: []
       indices: 
       edges: []
@@ -189,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2faeb866a4ffb1041bffbf97404a9651
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -199,8 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spike_0: 4723107735738678597
-      Spike_1: -7385789195546760866
+      Spike_0: -5159362228428509745
+      Spike_1: 973612898547601132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
