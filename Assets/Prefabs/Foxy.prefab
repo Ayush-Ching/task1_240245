@@ -107,7 +107,7 @@ MonoBehaviour:
   jumpSpeed: 25
   climbSpeed: 10
   dashSpeed: 25
-  scale: 1.5
+  scale: 1.25
   gravityScale_up: 6
   gravityScale_down: 9
   dashDamping: 7

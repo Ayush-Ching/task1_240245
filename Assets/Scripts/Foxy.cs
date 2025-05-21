@@ -11,6 +11,8 @@ public class Foxy : MonoBehaviour {
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
 
+    [SerializeField] private Moxxy moxxy;
+
     [Header("Constants")]
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpSpeed = 10f;
@@ -23,11 +25,16 @@ public class Foxy : MonoBehaviour {
     [SerializeField] private float deathWaitTime = 1f;
     [SerializeField] private float victoryWaitTime = 2f;
 
-    //[Header("Booleans")]
+    [Header("Booleans")]
     private bool canDash;
     private bool canMove;
     private bool hitSpike;
     private bool hasWon;
+    public bool isGrounded;
+    public bool isRunning;
+    public bool isOnWall;
+    public bool isDashing;
+    public bool isGoingUp;
 
     [Header("Layer Masks")]
     [SerializeField] private LayerMask groundLayerMask;
@@ -46,6 +53,7 @@ public class Foxy : MonoBehaviour {
         canMove = true;
         anim.SetBool("isDead", false);
         anim.SetBool("hasWon", false);
+        hasWon = false;
     }
 
     private void Update() {
@@ -66,7 +74,7 @@ public class Foxy : MonoBehaviour {
             verticalInput = -1f;
         }
 
-        if (isGrounded()) {
+        if (isOnGround()) {
             canDash = true;
         }
 
@@ -77,7 +85,7 @@ public class Foxy : MonoBehaviour {
             transform.localScale = new Vector3(-1, 1, 1) * scale;
         }
 
-        if (isTouchingWall() && isGrounded()) {
+        if (isTouchingWall() && isOnGround()) {
             horizontalInput = (horizontalInput == transform.localScale.x) ? 0 : horizontalInput;
         }
         else if (isTouchingWall()) {
@@ -86,18 +94,24 @@ public class Foxy : MonoBehaviour {
 
         if (canMove) rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
 
-        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C)) && isGrounded()) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.C)) && isOnGround()) {
             if (canMove) rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
         }
 
         anim.SetBool("isRunning", horizontalInput != 0);
-        anim.SetBool("isGrounded", isGrounded());
+        isRunning = horizontalInput != 0;
+
+        anim.SetBool("isGrounded", isOnGround());
+        isGrounded = isOnGround();
+
         anim.SetBool("isGoingUp", rb.linearVelocity.y > 0f);
+        isGoingUp = rb.linearVelocity.y > 0f;
 
         rb.gravityScale = (rb.angularVelocity <= 0f) ? gravityScale_down : gravityScale_up;
 
         if(isTouchingWall() && Input.GetKey(KeyCode.Z)) {
             anim.SetBool("isOnWall", true);
+            isOnWall = true;
             rb.gravityScale = 0f;
             if (canMove) rb.linearVelocity = new Vector2(0, verticalInput * climbSpeed);
             anim.SetBool("isClimbing", verticalInput != 0);
@@ -105,6 +119,7 @@ public class Foxy : MonoBehaviour {
         else {
             anim.SetBool("isClimbing", false);
             anim.SetBool("isOnWall", false);
+            isOnWall = false;
         }
 
         if(canMove && canDash && Input.GetKeyDown(KeyCode.X)) {
@@ -122,7 +137,7 @@ public class Foxy : MonoBehaviour {
             StartCoroutine(Victory());
         }
     }
-    private bool isGrounded() {
+    private bool isOnGround() {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0, Vector2.down, 0.1f, groundLayerMask);
         return raycastHit2D.collider != null;
     }
@@ -133,23 +148,30 @@ public class Foxy : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.tag == "Spike") {
-            hitSpike = true;
-        }
-        else {
-            hitSpike = false;
-        }
-
         if (collision.gameObject.tag == "Trophy") {
             hasWon = true;
         }
         else {
             hasWon = false;
         }
+
+        if(collision.gameObject.tag == "Moxxy") {
+            StartCoroutine(Die());
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Spike") {
+            hitSpike = true;
+        }
+        else {
+            hitSpike = false;
+        }
     }
 
     private IEnumerator Dash(Vector2 dir) {
         anim.SetBool("isDashing", true);
+        isDashing = true;
         float elapsedTime = 0f;
         while(elapsedTime < 0.3f) {
             elapsedTime += Time.deltaTime;
@@ -162,6 +184,7 @@ public class Foxy : MonoBehaviour {
         }
         rb.linearDamping = 0;
         anim.SetBool("isDashing", false);
+        isDashing = false;
         
         yield return null;
     }
@@ -169,6 +192,7 @@ public class Foxy : MonoBehaviour {
     private IEnumerator Die() {
         anim.SetBool("isDead", true);
         canMove = false;
+        moxxy.canMove = false;
         rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(deathWaitTime);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -177,6 +201,7 @@ public class Foxy : MonoBehaviour {
     private IEnumerator Victory() {
         anim.SetBool("hasWon", true);
         canMove = false;
+        moxxy.canMove = false;
         rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(victoryWaitTime);
         //Load Next Level
