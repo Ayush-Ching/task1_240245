@@ -21,4 +21,4 @@ https://drive.google.com/drive/folders/1kMSLkTn_2wuSlp3Cczf_wAHUhV5lz_Yp?usp=sha
 
 ---------
 
-The assets are taken from `https://ansimuz.itch.io/sunny-land-pixel-game-art`
+The assets are taken from https://ansimuz.itch.io/sunny-land-pixel-game-art
