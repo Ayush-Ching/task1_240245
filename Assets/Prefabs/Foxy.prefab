@@ -105,8 +105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moxxies:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   moveSpeed: 10
   jumpSpeed: 25
   climbSpeed: 10
