@@ -11,13 +11,13 @@ https://drive.google.com/drive/folders/1kMSLkTn_2wuSlp3Cczf_wAHUhV5lz_Yp?usp=sha
 
 ## Controls
 
-> Use Arrow keys for Movement.
-> Press SpaceBar or C for Jumping.
-> Press X to Dash
-> Press Z to grab and climb walls
->
-> **NOTE :** To dash again after a dash, you need to touch the ground at least once.
-> Press Escape to pause.
+> Use Arrow keys for Movement.<br>
+> Press SpaceBar or C for Jumping.<br>
+> Press X to Dash.<br>
+> Press Z to grab and climb walls.<br>
+> <br>
+> **NOTE :** To dash again after a dash, you need to touch the ground at least once.<br>
+> Press Escape to pause.<br>
 
 ---------
 
