@@ -17043,6 +17043,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8506630279677318641, guid: acd11500c2c906143962d8151ec50a06, type: 3}
   m_PrefabInstance: {fileID: 662323081}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &667724499
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723258003407752903, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_Name
+      value: SnowParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+--- !u!4 &667724500 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+  m_PrefabInstance: {fileID: 667724499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &701915717
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19060,7 +19122,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -4, y: 3, z: 0}
+  - first: {x: -3, y: 3, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -19070,27 +19132,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -2, y: 4, z: 0}
+  - first: {x: -3, y: 4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -19110,17 +19152,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: 5, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: -4, y: 6, z: 0}
+  - first: {x: -3, y: 5, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 1
@@ -19140,29 +19172,23 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: -2, y: 6, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 12
+  - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: 06113b4f45d7ee545b02044db7242590, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 12
+  - m_RefCount: 8
     m_Data: {fileID: 1986552864, guid: 73d2072951b76ff4f8f2e4338602d3fb, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 12
+  - m_RefCount: 8
     m_Data:
       e00: 1
       e01: 0
@@ -19181,7 +19207,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 12
+  - m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -19456,6 +19482,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3302572032213613310, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 667724500}
+    - target: {fileID: 3302572032213613310, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
       propertyPath: 'moxxies.Array.data[0]'
       value: 
       objectReference: {fileID: 271601208}
@@ -19494,3 +19524,4 @@ SceneRoots:
   - {fileID: 1714927309}
   - {fileID: 2127720148}
   - {fileID: 1624913291}
+  - {fileID: 667724499}

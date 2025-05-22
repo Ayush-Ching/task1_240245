@@ -12,6 +12,7 @@ public class Foxy : MonoBehaviour {
     private SpriteRenderer sprite;
 
     [SerializeField] private Moxxy[] moxxies;
+    [SerializeField] private Transform particles;
 
     [Header("Constants")]
     [SerializeField] private float moveSpeed = 10f;
@@ -128,6 +129,9 @@ public class Foxy : MonoBehaviour {
             StartCoroutine(Dash(dir));
             rb.linearDamping = 0;
         }
+
+        particles.position = GetComponent<Transform>().position + new Vector3(15, 7, 0);
+        
 
         if (hitSpike && !hasWon) {
             StartCoroutine(Die());

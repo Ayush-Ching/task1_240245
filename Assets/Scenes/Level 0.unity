@@ -1154,6 +1154,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acd11500c2c906143962d8151ec50a06, type: 3}
+--- !u!4 &169316035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+  m_PrefabInstance: {fileID: 7719316820334248459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &183418648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8506630279677318641, guid: acd11500c2c906143962d8151ec50a06, type: 3}
@@ -22242,6 +22247,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3302572032213613310, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 169316035}
+    - target: {fileID: 3302572032213613310, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
       propertyPath: moxxies.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -22432,6 +22441,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f7277490cc295e4987c0afbbfbeeacd, type: 3}
+--- !u!1001 &7719316820334248459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 278576125568471336, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723258003407752903, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
+      propertyPath: m_Name
+      value: SnowParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e8397d11c8cc05d4b94babdc18c28640, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -22448,3 +22514,4 @@ SceneRoots:
   - {fileID: 2721715883282632854}
   - {fileID: 2127720148}
   - {fileID: 7648435722622383482}
+  - {fileID: 7719316820334248459}
