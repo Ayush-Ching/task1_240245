@@ -130,7 +130,7 @@ public class Foxy : MonoBehaviour {
             rb.linearDamping = 0;
         }
 
-        particles.position = GetComponent<Transform>().position + new Vector3(15, 7, 0);
+        particles.position = GetComponent<Transform>().position + new Vector3(20, 10, 0);
         
 
         if (hitSpike && !hasWon) {
