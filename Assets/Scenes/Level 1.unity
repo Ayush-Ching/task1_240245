@@ -19486,6 +19486,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 667724500}
     - target: {fileID: 3302572032213613310, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
+      propertyPath: moxxies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302572032213613310, guid: 10977ca5fe9ab464097708738aaf2438, type: 3}
       propertyPath: 'moxxies.Array.data[0]'
       value: 
       objectReference: {fileID: 271601208}
