@@ -7,7 +7,7 @@ https://drive.google.com/drive/folders/1kMSLkTn_2wuSlp3Cczf_wAHUhV5lz_Yp?usp=sha
 
 >1. Made the art for the Keys and Pillars(Doors).
 >2. Wrote all the scripts for the game.
->3. Did the Lebvel design.
+>3. Did the Level design.
 
 ## Controls
 
