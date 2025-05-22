@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5766426665705705668}
   - component: {fileID: 3974261905026463581}
   - component: {fileID: 2232202221858909119}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pillar
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,7 +170,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf4e437be5ccf34f897488381cd903e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initColor: {r: 0, g: 0, b: 0, a: 0}
-  touchedColor: {r: 0, g: 0, b: 0, a: 0}
-  openColor: {r: 0, g: 0, b: 0, a: 0}
-  checkPoints: []
+  keys: []

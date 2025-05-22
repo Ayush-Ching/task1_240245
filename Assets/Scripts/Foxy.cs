@@ -11,7 +11,7 @@ public class Foxy : MonoBehaviour {
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
 
-    [SerializeField] private Moxxy moxxy;
+    [SerializeField] private Moxxy[] moxxies;
 
     [Header("Constants")]
     [SerializeField] private float moveSpeed = 10f;
@@ -129,7 +129,7 @@ public class Foxy : MonoBehaviour {
             rb.linearDamping = 0;
         }
 
-        if (hitSpike) {
+        if (hitSpike && !hasWon) {
             StartCoroutine(Die());
         }
 
@@ -155,7 +155,7 @@ public class Foxy : MonoBehaviour {
             hasWon = false;
         }
 
-        if(collision.gameObject.tag == "Moxxy") {
+        if(!hasWon && collision.gameObject.tag == "Moxxy") {
             StartCoroutine(Die());
         }
     }
@@ -192,7 +192,9 @@ public class Foxy : MonoBehaviour {
     private IEnumerator Die() {
         anim.SetBool("isDead", true);
         canMove = false;
-        moxxy.canMove = false;
+        for(int i=0; i<moxxies.Length; i++) {
+            moxxies[i].canMove = false;
+        }
         rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(deathWaitTime);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -201,9 +203,11 @@ public class Foxy : MonoBehaviour {
     private IEnumerator Victory() {
         anim.SetBool("hasWon", true);
         canMove = false;
-        moxxy.canMove = false;
+        for (int i = 0; i < moxxies.Length; i++) {
+            moxxies[i].canMove = false;
+        }
         rb.linearVelocity = Vector2.zero;
         yield return new WaitForSeconds(victoryWaitTime);
-        //Load Next Level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
